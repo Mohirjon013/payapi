@@ -1,0 +1,106 @@
+.site-header {
+    padding-top: 40px ;
+    padding-bottom: 10px;
+    position: sticky;
+    z-index: 3;
+    top: 0;
+    backdrop-filter: blur(10px);
+}
+.header {
+    @include display($AI:center, $JC:space-between, $gap:0);
+}
+.header__contant-wrapper {
+    @include display($AI:center, $JC:start, $gap:64px);
+}
+.header__img{
+    display: inline-block;
+}
+.header__list {
+    @include display($AI:center, $JC:start, $gap:40px);
+}
+.header__link {
+    @include textStyle($FS:15px, $FW:700, $LH:17px, $CLR:$text-clr, $mb:0px);
+    opacity: 0.7;
+
+    &:hover{
+        opacity: 1;
+    }
+}
+.header__btn {
+    @include BtnStyle($W:173px, $PY:15px, $BtnBG:#BA4270, $BtnBorderCLR:none, $HoverBG:#DA6D97, $HoverCLR:$white-clr, $HoverBorderCLR:none, $BtnFS:15px, $BtnFW:700, $BtnLH:17px, $BtnCLR:$white-clr, $Btnmb:0px);
+    box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+}
+
+.header__modal{
+    width: 80%;
+    height: 100vh;
+    padding: 24px;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 3;
+    background-color: #1B262F ;
+    transition: 0.3s all linear;
+}
+.show{
+    right: 0;
+}
+.close__top-wrapper {
+    padding:24px 0;
+    border-bottom: 1px solid $white-clr;
+    text-align: right;
+}
+.close__bg{
+    background-color: transparent;
+    border: none;
+}
+.close__list {
+    margin: 43px 0 32px;
+    @include display($AI:center, $JC:start, $gap:32px);
+    flex-direction: column;
+}
+.close__link {
+    @include textStyle($FS:20px, $FW:700, $LH:23px, $CLR:$white-clr, $mb:0px);
+    opacity: 70%;
+}
+.close__icon-link {
+    @include BtnStyle($W:100%, $PY:15px, $BtnBG:#BA4270, $BtnBorderCLR:none, $HoverBG:#DA6D97, $HoverCLR:$white-clr, $HoverBorderCLR:none, $BtnFS:15px, $BtnFW:700, $BtnLH:17px, $BtnCLR:$white-clr, $Btnmb:0px);
+    box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+}
+.header__menu-btn {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+// Tablet start
+
+@media (max-width:900px){
+    .site-header {
+        padding: 40px 0 40px;
+    }
+    .header__img > img{
+        width: 135px;
+        height: 38px;
+    }
+}
+
+// Mobile start
+
+@media (max-width:718px){
+    .site-header {
+        padding: 40px 0 32px;
+    }
+    .header__img > img{
+        width: 135px;
+        height: 38px;
+    }
+    .header__list, .header__btn {
+        display: none;
+    }
+    .header__menu-btn {
+        display: block;
+    }
+    
+}

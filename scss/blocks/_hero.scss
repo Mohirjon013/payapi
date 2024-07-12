@@ -1,0 +1,110 @@
+
+
+.hero-section {
+    padding-top: 70px;
+    padding-bottom: 75px;
+}
+.hero {
+    @include display($AI:center, $JC:start, $gap:206px);
+}
+.hero__contant-wrapper {
+    width: 546px;
+}
+.hero__title {
+    @include textStyle($FS:72px, $FW:700, $LH:72px, $CLR:$text-clr, $mb:21px);
+}
+.form {
+    width: 445px;   
+}
+.form__label {
+    width: 100%;
+    position: relative;
+}
+.form__input {
+    width: 100%;
+    padding: 15px 5px 15px 27px;
+    border: none;
+    outline: none;
+    border-radius: 24px;
+    box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+    background-color: white;
+    @include textStyle($FS:15px, $FW:700, $LH:17px, $CLR:$text-clr, $mb:0px);
+    opacity: 50%;
+    &:focus{
+        box-shadow: 0px 0px 5px 1px $text-clr;
+        opacity: 1;
+    }
+}
+.form__btn {
+    position: absolute;
+    right: 0;
+    @include BtnStyle($W:173px, $PY:15px, $BtnBG:#BA4270, $BtnBorderCLR:none, $HoverBG:#DA6D97, $HoverCLR:$white-clr, $HoverBorderCLR:none, $BtnFS:15px, $BtnFW:700, $BtnLH:17px, $BtnCLR:$white-clr, $Btnmb:0px);
+    border: none;
+}
+.hero__text {
+    margin-top: 16px;
+    margin-left: 27px;
+    @include textStyle($FS:17px, $FW:400, $LH:17px, $CLR:$text-clr, $mb:21px);
+}
+.hero__text > a {
+    @include textStyle($FS:17px, $FW:700, $LH:17px, $CLR:$text-clr, $mb:21px);
+}
+@media (max-width:957px) {
+    .hero{
+        @include display($AI:center, $JC:space-between, $gap:0);
+    }
+}
+
+// Tablet start
+@media (max-width:850px) {
+    .hero{
+        @include display($AI:center, $JC:space-between, $gap:0);
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .hero__img{
+        width: 159px;
+        height: 300px;
+        margin-bottom: 48px;
+    }
+    .hero__contant-wrapper {
+        width: 90%;
+    }
+    .hero__title {
+        @include textStyle($FS:48px, $FW:400, $LH:56px, $CLR:$text-clr, $mb:21px);
+    }
+    .form {
+       margin: 0 auto;
+    }
+}
+
+// Mobile start
+@media (max-width:583px) {
+    .hero-section{
+        margin-bottom: 80px;
+    }
+    .hero__img{
+        width: 127px;
+        height: 236px;
+        margin-bottom: 24px;
+    }
+    .hero__contant-wrapper {
+        width: 100%;
+    }
+    .hero__title {
+        @include textStyle($FS:32px, $FW:400, $LH:36px, $CLR:$text-clr, $mb:24px);
+    }
+    .form {
+        width: 100%;
+       margin: 0 auto;
+    }
+    .form__label {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .form__btn {
+        width: 100%;
+        position: static;
+    }
+}
