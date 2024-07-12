@@ -6,11 +6,13 @@
     <title>Payapi</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="icon" href="./images/icon-logo.svg">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <header class="site-header">
+    <header  class="site-header">
         <div class="container">
-            <div class="header">
+            <div data-aos="zoom-in-up" data-aos-duration="800" class="header">
                 <div class="header__contant-wrapper">
                     <a class="header__img" href="./index.html">
                         <img  src="./images/logo.svg" alt="" width="133" height="36">
@@ -20,7 +22,7 @@
                             <a href="#" class="header__link">Pricing</a>
                         </li>
                         <li class="header__item">
-                            <a href="#" class="header__link">About</a>
+                            <a href="./about.html" class="header__link">About</a>
                         </li>
                         <li class="header__item">
                             <a href="#" class="header__link">Contact</a>
@@ -116,7 +118,7 @@
                             Our pre-built form is easy to integrate in your app or website’s checkout flow and designed to optimize conversion. 
                         </p>
                     </div>
-                    <img class="simple__img" src="./images/simple-img.png" alt="simple img" width="586" height="500">
+                    <img class="simple__img" src="./images/simple-img.png" alt="simple img" width="566" height="500">
                 </div>
             </div>
         </section>
@@ -167,7 +169,7 @@
                             <a class="footer__link" href="#">Pricing</a>
                         </li>
                         <li class="footer__item">
-                            <a class="footer__link" href="#">About</a>
+                            <a class="footer__link" href="./about.html">About</a>
                         </li>
                         <li class="footer__item">
                             <a class="footer__link" href="#">Contact</a>
@@ -200,5 +202,10 @@
 
 
     <script src="./js/main.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>

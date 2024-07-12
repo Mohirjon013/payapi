@@ -13,6 +13,7 @@ body{
     background-repeat: no-repeat;
     background-size: 640px 608px;
     background-position: right top;
+    overflow-x: hidden;
 }
 
 h1, h2, h3{
@@ -32,4 +33,11 @@ h1, h2, h3{
         background-image: url(../images/mobile-bg.png);
     
     }
+}
+
+.about-body{
+    background-image: url(../images/about-body-bg.png);
+    background-repeat: no-repeat;
+    background-size: 700px 253px;
+    background-position: right top;
 }
